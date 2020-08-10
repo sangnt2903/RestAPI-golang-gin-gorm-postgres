@@ -32,6 +32,10 @@ func SetRoutesConfig() *gin.Engine{
 	r.GET("/authors/:id", controllers.DeleteAuthor)
 	*/
 	//#end Author
-
+	r.GET("/users/:id", controllers.GetUser)
+	r.GET("/companies/:id", controllers.GetCompany)
+	r.GET("/companies", controllers.GetCompanies)
+	r.GET("/company_users/companies/:id", controllers.GetCompanyUserByCompanyId)
+	r.GET("/company_users/users/:id", controllers.GetCompanyUserByUserID)
 	return r
 }
